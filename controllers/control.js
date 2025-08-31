@@ -23,10 +23,7 @@ console.log( req.body)
     }
 
     // Check for existing email
-    const existingUser = await Registration.findOne({ emails });
-    if (existingUser) {
-      return res.status(409).json({ message: "Email already registered" });
-    }
+  
 
     // Calculate health status
     let statusLevel = "Normal";
